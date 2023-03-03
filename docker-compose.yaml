@@ -1,0 +1,7 @@
+version: '3.0'
+services:
+  is-frontend:
+    build: '.'
+    container_name: is-frontend
+    ports:
+      - '3000:80'
