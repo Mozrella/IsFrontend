@@ -4,7 +4,6 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
 const { Header, Content, Footer, Sider } = Layout;
 
-
 const items = [
   {
     label: <NavLink to='/home'>Home</NavLink>,
@@ -41,7 +40,7 @@ export function ISLayout(){
                 margin: 16,
                 background: 'rgba(255, 255, 255, 0.2)',
               }}
-            > <h1>ACA VA EL LOGO</h1></div>
+            > <img src=''></img></div>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
           </Sider>
           <Layout className="site-layout">
@@ -79,7 +78,7 @@ export function ISLayout(){
                 textAlign: 'center',
               }}
             >
-              Ant Design ©2023 Created by Ant UED
+              Ingenieria de Software - Grupo 16
             </Footer>
           </Layout>
         </Layout>
