@@ -6,7 +6,7 @@ export function VisualizadorDeDatos({data}){
     const colors = {
         ROJO: '#F53022',
         AMARILLO: '#E0F53B',
-        VERDE: '#98A818',
+        VERDE: '#17fc03',
         NEUTRO: '#121D1F'
     };
 
@@ -51,9 +51,9 @@ export function VisualizadorDeDatos({data}){
                     <Card bordered={true}>
                         <h1>Semaforo observados</h1>
                         <div className="semaforo">
-                            <div className="circulo" style={{ background: topColorObservados }}></div>
-                            <div className="circulo" style={{ background: middleColorObservados }}></div>
-                            <div className="circulo" style={{ background: bottomColorObservados }}></div>
+                            <div className="circulo" style={{ background: data.semaforoObservado === 'ROJO' ? colors.ROJO : colors.NEUTRO }}></div>
+                            <div className="circulo" style={{ background: data.semaforoObservado === 'AMARILLO' ? colors.AMARILLO : colors.NEUTRO }}></div>
+                            <div className="circulo" style={{ background: data.semaforoObservado === 'VERDE' ? colors.VERDE : colors.NEUTRO }}></div>
                         </div>
                         <Statistic
                             title="Defectos Observados"

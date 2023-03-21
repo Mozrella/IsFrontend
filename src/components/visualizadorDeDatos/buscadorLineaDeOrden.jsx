@@ -10,7 +10,7 @@ export function BuscadorLineaDeOrden({setValorBuscado}){
     const [numeroDeOrden, setNumeroDeOrden] = useState(0)
 
     const onSearch = () => {
-        console.log(`Buscando numero de orden ${numeroDeOrden}`)
+        console.log(`Buscando numero de linea ${numeroDeOrden}`)
         setValorBuscado(numeroDeOrden)
     }
 
@@ -18,7 +18,7 @@ export function BuscadorLineaDeOrden({setValorBuscado}){
     return(
         <>
             <Search
-                placeholder="Ingrese numero de orden"
+                placeholder="Ingrese numero de linea"
                 onSearch={onSearch}
                 onChange={event => Number(setNumeroDeOrden(event.target.value))}
             />

@@ -24,11 +24,11 @@ export async function callVisualizarDatos(numeroDeOrden) {
                     nombre: datos.nombreModelo,
                     sku: datos.skuModelo,
                 },
-                color: "",
+                color: datos.color,
                 paresPrimera: datos.paresPrimera,
                 defectosObservado: datos.defObs,
                 defectosObservadoMin: datos.limiteInfObsModelo,
-                defectosObservadosMax: datos.limiteSupObsModelo,
+                defectosObservadosMax: datos.limiteSupoObsModelo,
                 defectosReproceso: datos.defRep,
                 defectosReprocesoMin: datos.limiteInfRepModelo,
                 defectosReprocesoMax: datos.limiteSupRepModelo,
@@ -40,6 +40,6 @@ export async function callVisualizarDatos(numeroDeOrden) {
             }
     }catch(error){
         console.log(error)
-        return {}
+        return null
     }
 }

@@ -41,9 +41,9 @@ export function VisualizadorDeDatosPage(){
             if (valorBuscado === 0) return;
 
             console.log("llamando")
-
+                
             const response = await callVisualizarDatos(valorBuscado);
-
+            
             setData(response)
 
             setSpinVisible(false)
@@ -60,7 +60,7 @@ export function VisualizadorDeDatosPage(){
                 <Col span={8}/>
                 <Col span={8}>{(spinVisible)?<Spin tip="Sincronizando"/> : null}</Col>
                 <Divider/>
-                <Col span={24}>{(data === null )? null : <VisualizadorDeDatos data={data}/>}</Col>
+                <Col span={24}>{(data === null)? null : <VisualizadorDeDatos data={data}/>}</Col>
             </Row>
         </>
     )
